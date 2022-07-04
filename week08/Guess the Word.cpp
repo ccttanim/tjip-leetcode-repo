@@ -19,7 +19,9 @@ public:
         while(wordlist.size() > 1)
         {
             int rdx = rand() % wordlist.size();
+
             string query_string = wordlist[rdx];
+            int score = master.guess(query_string);
             vector<string> newlist;
             for(auto &wd : wordlist)
             {
